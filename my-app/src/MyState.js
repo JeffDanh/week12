@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 class MyState extends Component{
-    constuctor(props){
+    constructor(props){
         super(props);
         this.state = {
-            txt: "hello world",
-            count: 1
+            myArray: [1, 2, 3, 3, 4, 5 ],
+            count: 1,
+            txt: "hello world"
         }
     }
     update(e){
@@ -14,6 +15,7 @@ class MyState extends Component{
     render(){
         return(
             <div>
+                <h1>{this.state.txt} {this.state.count}</h1><br />
                 <input type="text" onChange={this.update.bind(this)}></input>
                 {/* {this.state.count} */}
                 {/* {this.state.txt.map(t => t)} */}

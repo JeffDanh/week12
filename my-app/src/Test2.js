@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 
 class Test2 extends Component {
     render(){
@@ -18,7 +18,7 @@ class Test2 extends Component {
 }
 
 Test2.propTypes = {
-    txt: propTypes.string,
-
+    txt: PropTypes.string,
+    cat: PropTypes.number.isRequired
 }
 export default Test2;
